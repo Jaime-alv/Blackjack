@@ -1,7 +1,17 @@
-#! python3
+# Copyright 2021 Jaime Álvarez Fernández
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+# http://www.apache.org/licenses/LICENSE-2.0
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+# ! python3
 import random
 import sys
-
 
 Deck = {'Ace': 1, 'Two': 2, 'Three': 3, 'Four': 4, 'Five': 5, 'Six': 6, 'Seven': 7, 'Eight': 8, 'Nine': 9, 'Ten': 10,
         'Jack': 10, 'Queen': 10, 'King': 10}
@@ -48,7 +58,7 @@ def draw_cards(quantity, player, deck, deck_value):
 
 def greeting():
     Croupier['Name'] = random.choice(Croupier_names)
-    print("Hi, my name is {}. I'll be your Croupier for this session.".format(Croupier['Name']))
+    print("Hello, my name is {}. I'll be your Croupier for this session.".format(Croupier['Name']))
     print('Prizes are:')
     print('- Blackjack pays 3 to 2.')
     print('- Wins pays 1 to 1.')
@@ -118,7 +128,7 @@ def active_players():
 
 def name():
     # loop for naming each player
-    print('\nHello and welcome!')
+    print('\nWelcome!')
     for x in Players:
         if Players[x]['Active']:
             while True:
@@ -328,10 +338,10 @@ def hit_stand(player, deck, deck_value, score, state):
 
 def split_deck(player):
     if player['Money'] >= (player['Bet'] * 2):
-        print('\n{}, you can split your pair in two different decks.'.format(player['Name']))
+        print('\n{}, you can split your pair in two different hands.'.format(player['Name']))
         print_deck(player, 'Deck1')
         while True:
-            print('Do you want two decks to play with?')
+            print('Do you want two hands to play with?')
             answer_double = input("y/n: ").lower()
             if answer_double not in ['y', 'n']:
                 print('Enter a valid input')
@@ -456,7 +466,7 @@ def game_resolution():
                     if Croupier['Score1'] == player['Score1']:
                         print("{}. It's a tie, you recover your bet.".format(player['Name']))
                     if Croupier['Score1'] == player.get('Score2', 0):
-                        print("{}. It's a tie, you recover your bet.".format(player['Name']))
+                        print("{}. It's a tie, you recover your bet from hand #2.".format(player['Name']))
                     if player['Score1'] < Croupier['Score1']:
                         player['Money'] -= player['Bet']
                         print("Sorry, {}. You lost {}¢.".format(player['Name'], player['Bet'], ))
