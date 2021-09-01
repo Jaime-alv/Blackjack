@@ -1,7 +1,6 @@
 import random
 import sys
 
-# ¢ = alt + 0162
 # Players = {'Player x':{'Name': '', 'Money': 0, 'Bet': 0, 'Active': True, 'Play': True, 'Score1': 0, 'Score2': 0
 # 'BJ': False, 'Double': False, 'Deck1':[], 'c_values1': [],  'Deck2':[], 'c_values2': [], , 'insurance': False,
 # 'half_bet': 0}}
