@@ -1,6 +1,8 @@
+#! python3
 import random
 import sys
 
+# ¢ = alt + 0162
 # Players = {'Player x':{'Name': '', 'Money': 0, 'Bet': 0, 'Active': True, 'Play': True, 'Score1': 0, 'Score2': 0
 # 'BJ': False, 'Double': False, 'Deck1':[], 'c_values1': [],  'Deck2':[], 'c_values2': [], , 'insurance': False,
 # 'half_bet': 0}}
@@ -98,7 +100,7 @@ def config():
 def active_players():
     # Ask for number of players and creates its profiles. Since dict and list are mutable, hence they are referenced,
     # need to create new ones for each one
-    print('How many players will be?')
+    print('How many players will be in this session?')
     np = input("#: ")
     if np.isdigit() and 1 <= int(np):
         Config['Number of players'] = int(np)
@@ -111,6 +113,8 @@ def active_players():
             Players.setdefault(new_player, template_new)
             Players[new_player].setdefault('Deck1', [])
             Players[new_player].setdefault('c_values1', [])
+        print("There will be {} pack(s) in play".format(Config['max_deck']))
+        pause()
         name()
     else:
         print('Enter a valid input.')
@@ -198,7 +202,7 @@ def first_round():
             player = Players[x]
             if player['c_values1'][0] == player['c_values1'][1] and sum_card_values(player['c_values1']) in [9, 10, 11]:
                 print(
-                    '\n{}. It seems you can double your bet and split your deck. Be wary, you can only do one!'.format(
+                    '\n{}. It seems you can double your bet and split your hand. Be wary, you can only do one!'.format(
                         player['Name']))
             if sum_card_values(player['c_values1']) in [9, 10, 11]:
                 double_bet(Players[x])
@@ -250,7 +254,7 @@ def pause():
 def double_bet(player):
     if player['Money'] >= (player['Bet'] * 2):
         val = sum_card_values(player['c_values1'])
-        print('\n{}. Your deck is worth {}.'.format(player['Name'], val))
+        print('\n{}. Your hand is worth {}.'.format(player['Name'], val))
         print_deck(player, 'Deck1')
         print('You can double down your bet if you want. You will draw just one additional card if you agree.')
         while True:
@@ -303,7 +307,7 @@ def hit_stand(player, deck, deck_value, score, state):
         print('\n{}, it is your turn.'.format(player['Name']))
         show_card_value(player, deck, deck_value)
         if val > 21:
-            print("Bust! Your deck is over 21.")
+            print("Bust! Your hand is over 21.")
             player[score] = val
             player[state] = False
             pause()
@@ -346,10 +350,10 @@ def split_deck(player):
                 player['Deck2'].append(player['Deck1'][1])
                 player['Deck1'].pop()
                 if player['c_values1'][0] == 'Ace':
-                    print('Since the deck contains an Ace, you can only draw one additional card.')
-                    print('{}. This is deck 1:'.format(player['Name']))
+                    print('Since your hand contains an Ace, you can only draw one additional card.')
+                    print('{}. This is hand #1:'.format(player['Name']))
                     double_ace(player, 'Deck1', 'c_values1', 'Score1')
-                    print('{}. This is deck 2:'.format(player['Name']))
+                    print('{}. This is hand #2:'.format(player['Name']))
                     double_ace(player, 'Deck2', 'c_values2', 'Score2')
                     player['Play'] = False
                     player['Double'] = False
@@ -384,7 +388,7 @@ def croupier():
         else:
             print("Its values is: {}\n".format(val))
         if val > 21:
-            print('Bust! My deck is over 21.')
+            print('Bust! My hand is over 21.')
             Croupier['Play'] = False
             Croupier['Score1'] = val
         elif Croupier['Ace'] and 17 <= (val + 10) <= 21:
@@ -418,7 +422,7 @@ def game_resolution():
             if Croupier['BJ']:
                 if player['BJ']:
                     print('{}. You recover your bet of {}¢.'.format(player['Name'], player['Bet']))
-                if player['insurance'] and 0 < player['half_bet']:
+                if player['insurance'] and 0 < player.get('half_bet', 0):
                     print("{} your insurance covers your bet and you win {}¢".format(player['Name'],
                                                                                      player['half_bet'] * 2))
                     player['Money'] += player['half_bet'] * 2
@@ -440,13 +444,13 @@ def game_resolution():
                         print('{}. You win! You get {}¢.'.format(player['Name'], player['Bet'] * 2))
                     if player.get('Score2', 22) <= 21:
                         player['Money'] += player['Bet']
-                        print('{}. You win! You get {}¢ from deck #2.'.format(player['Name'], player['Bet'] * 2))
+                        print('{}. You win! You get {}¢ from hand #2.'.format(player['Name'], player['Bet'] * 2))
                     if player['Score1'] > 21:
                         player['Money'] -= player['Bet']
                         print("Sorry, {}. You lost {}¢.".format(player['Name'], player['Bet'], ))
                     if player.get('Score2', 0) > 21:
                         player['Money'] -= player['Bet']
-                        print("Sorry, {}. You lost {}¢ from deck #2.".format(player['Name'], player['Bet'], ))
+                        print("Sorry, {}. You lost {}¢ from hand #2.".format(player['Name'], player['Bet'], ))
                 elif Croupier['Score1'] <= 21 and player['BJ'] is False:
                     if Croupier['Score1'] < player['Score1'] <= 21:
                         player['Money'] += player['Bet']
@@ -463,13 +467,13 @@ def game_resolution():
                         print("Sorry, {}. You lost {}¢.".format(player['Name'], player['Bet'], ))
                     if player.get('Score2', Croupier['Score1']) < Croupier['Score1']:
                         player['Money'] -= player['Bet']
-                        print("Sorry, {}. You lost {}¢ from deck #2.".format(player['Name'], player['Bet'], ))
+                        print("Sorry, {}. You lost {}¢ from hand #2.".format(player['Name'], player['Bet'], ))
                     if player['Score1'] > 21:
                         player['Money'] -= player['Bet']
                         print("Sorry, {}. You lost {}¢.".format(player['Name'], player['Bet'], ))
                     if player.get('Score2', 0) > 21:
                         player['Money'] -= player['Bet']
-                        print("Sorry, {}. You lost {}¢ from deck #2.".format(player['Name'], player['Bet'], ))
+                        print("Sorry, {}. You lost {}¢ from hand #2.".format(player['Name'], player['Bet'], ))
     pause()
     goodbye()
 
