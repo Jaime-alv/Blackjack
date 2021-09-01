@@ -306,6 +306,11 @@ def show_card_value(player, deck, deck_value):
         print('Its value is: {}'.format(val))
 
 
+def print_deck(player, deck):
+    for card in player[deck]:
+        print("- " + card)
+
+
 def hit_stand(player, deck, deck_value, score, state):
     while player['Active'] and player[state]:
         val = sum_card_values(player[deck_value])
@@ -339,7 +344,7 @@ def hit_stand(player, deck, deck_value, score, state):
 def split_deck(player):
     if player['Money'] >= (player['Bet'] * 2):
         print('\n{}, you can split your pair in two different hands.'.format(player['Name']))
-        print_deck(player, 'Deck1')
+        show_card_value(player, 'Deck1', 'c_values1')
         while True:
             print('Do you want two hands to play with?')
             answer_double = input("y/n: ").lower()
@@ -412,11 +417,6 @@ def croupier():
             draw_cards(1, Croupier, 'Deck1', 'c_values1')
         pause()
     game_resolution()
-
-
-def print_deck(player, deck):
-    for card in player[deck]:
-        print("- " + card)
 
 
 def game_resolution():
