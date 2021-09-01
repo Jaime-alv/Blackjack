@@ -46,7 +46,7 @@ Each participant attempts to beat the dealer by getting a count as close to 21 a
 
 ###### Card values/Scoring
 
-Aces can be 1 or 11, when the player hit s (for stand), the game will pick the highest value without going over 21. If a participant draws 'Ace of Spades' and 'Eight of Hearts', it will be displayed both values, 9 and 19; if, for example, 'five of Clubs' is drawn next, only 14 will be displayed, as 24 is over 21. Face cards are 10 and any other card is its pip value.
+Aces can be 1 or 11. Face cards are 10 and any other card is its pip value.
 
 ###### Betting
 
@@ -55,6 +55,7 @@ Before the deal begins, each player places a bet. Minimum bet, by default, is 5,
 ###### The deal
 
 When all players have placed their bets, each player receive two cards, croupier too. All cards will be shown except croupier's second one.
+![first round](https://user-images.githubusercontent.com/88266316/131735625-bc5a6830-911e-4a16-8ea5-ac74cd0fc4eb.jpg)
 
 ###### Naturals
 
@@ -66,7 +67,9 @@ If the dealer's face-up card is a ten-card or an ace, they look at their face-do
 
 Order is static, Player 1 always starts first, and then comes Player 2 and so on. Player must decide whether to "stand" (not ask for another card) or "hit" (ask for another card in an attempt to get closer to a count of 21, or even hit 21 exactly). Thus, a player may stand on the two cards originally dealt to them, or they may ask the dealer for additional cards, one at a time, until deciding to stand on the total (if it is 21 or under), or goes "bust" (if it is over 21). In the latter case, the player loses and the dealer collects the bet wagered. The dealer then asks next player and serves them in the same manner.
 
-The combination of an ace with a card other than a ten-card is known as a "soft hand," because the player can count the ace as a 1 or 11, and either draw cards or not. For example with a "soft 17" (an ace and a 6), the total is 7 or 17. While a count of 17 is a good hand, the player may wish to draw for a higher total. If the draw creates a bust hand by counting the ace as an 11, the player simply counts the ace as a 1 and continues playing by standing or "hitting" (asking the dealer for additional cards, one at a time).
+The combination of an ace with a card other than a ten-card is known as a "soft hand," because the player can count the ace as a 1 or 11, and either draw cards or not. For example with a "soft 17" (an ace and a 6), the total is 7 or 17. While a count of 17 is a good hand, the player may wish to draw for a higher total. If the draw creates a bust hand by counting the ace as an 11, the player simply counts the ace as a 1 and continues playing by standing or "hitting" (asking the dealer for additional cards, one at a time). When the player hit s (for stand), the game will pick the highest value without going over 21. If a participant draws 'Ace of Spades' and 'Eight of Hearts', it will be displayed both values, 9 and 19; if, for example, 'five of Clubs' is drawn next, only 14 will be displayed, as 24 is over 21.
+![Ace](https://user-images.githubusercontent.com/88266316/131735957-de04078f-c9ee-44d4-804f-b5d4fb88fc9c.jpg)
+
 
 ###### The Croupier's play
 
