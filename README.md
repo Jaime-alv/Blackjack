@@ -87,7 +87,7 @@ Withdraw
 After the game resolution, if any participant would want to withdraw, they can do so by typing their name. The script will recognize the player and deactivate its profile for the remainder of the session.
 If any player's funds are below the minimun bet, they're automatically deactivated and if there are no players left, the script will quit by itself.
 
-#Setup
+# Setup
 
 Game is built under pyhton 3.9 and doesn't requiere any special libraries, other than python installed in the system.
 You can run the game, in Windows, directly from the bat file or through any other means.
