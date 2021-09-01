@@ -90,4 +90,4 @@ If any player's funds are below the minimun bet, they're automatically deactivat
 # Setup
 
 Game is built under pyhton 3.9 and doesn't requiere any special libraries, other than python installed in the system.
-You can run the game, in Windows, directly from the bat file or through any other means.
+You can run the game, in Windows, directly from Blackjack.bat file or through any other means.
