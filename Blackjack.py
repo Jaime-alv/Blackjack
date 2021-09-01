@@ -70,7 +70,7 @@ def config():
     print('\nLet me ask you a few questions before we set the table.')
     print('Do you prefer default rules, or would you rather have a custom set of rules?')
     while True:
-        print('Default: Minimum bet = {}; Funds available to each player = {}; Croupier show one card.'.format(
+        print('Default: Minimum bet = {}¢; Funds available to each player = {}¢; Croupier show one card.'.format(
             Config['Minimum_bet'], Config['Money']))
         configuration = input("d/c: ").lower()
         if configuration not in ['d', 'c']:
@@ -118,7 +118,7 @@ def active_players():
             Players.setdefault(new_player, template_new)
             Players[new_player].setdefault('Deck1', [])
             Players[new_player].setdefault('c_values1', [])
-        print("There will be {} pack(s) in play".format(Config['max_deck']))
+        print("There will be {} deck(s) in play".format(Config['max_deck']))
         pause()
         name()
     else:
@@ -228,7 +228,7 @@ def insurance():
             while True:
                 bet_half = Players[x]['Bet'] // 2
                 print("{} would you like adding insurance?".format(Players[x]['Name']))
-                print("It can go up to half your original bet of {}.".format(Players[x]['Bet']))
+                print("It can go from 0, up to half your original bet of {}.".format(Players[x]['Bet']))
                 answer = input('#: ')
                 if Players[x]['Money'] >= (Players[x]['Bet'] + Players[x]['Bet'] // 2):
                     if answer.isdigit() and 0 <= int(answer) <= bet_half:
