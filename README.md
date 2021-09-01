@@ -8,14 +8,16 @@ Default and custom mode
 
 You will be presented with an option to choose, play with the default game rules or your own custom ones. Options are:
 
-Minimum bet: represents the minimum bet each participant has to make at the start of each game
-Funds: how much money each player have at available
-Croupier show card: by default, croupier will show its first card, while second one is revealed when its turns begins.
-By default:
+- Minimum bet: represents the minimum bet each participant has to make at the start of each game
+- Funds: how much money each player have at available
+- Croupier show card: by default, croupier will show its first card, while second one is revealed when its turns begins.
 
-Minimum bet: 5¢
-Funds: 100¢
-Croupier show card
+Default:
+
+- Minimum bet: 5¢
+- Funds: 100¢
+- Croupier show card
+
 Number of players
 
 After the rules are set, you'll be asked how many participants will be playing this session. It affects how many packs of cards are. Minimum is one, maximum is up to your PC. You don't have to remember which number you are. The script will ask for your name and everytime it's your turn, it will use said name.
