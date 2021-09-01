@@ -1,7 +1,7 @@
-Blackjack
+# Blackjack
 A text-based blackjack game, with all features from classic blackjack for the whole family!
 
-The game
+# The game
 Everyone's favourite! The rules are simple, the play is thrilling and you can use all the strategies you want! Nobody is going to be mad at you ;). You can play with as many friends as you want!
 
 Default and custom mode
@@ -74,5 +74,5 @@ Withdraw
 
 After the game resolution, if any participant would want to withdraw, they can do so by typing their name. The script will recognize the player and deactivate its profile for the remainder of the session. If any player's funds are below the minimum bet, they're automatically deactivated and if there are no players left, the script will quit by itself.
 
-Setup
+# Setup
 Game is built under python 3.9 and doesn't require any special libraries, other than python installed in the system. You can run the game, in Windows, directly from Blackjack.bat file or through any other means.
