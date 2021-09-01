@@ -15,13 +15,13 @@ Options are:
 - Croupier show card: by default, croupier will show its first card, while second one is revealed when its turns begins.
 
 By default:
-- Minimun bet: 5
-- Funds: 100
+- Minimun bet: 5¢
+- Funds: 100¢
 - Croupier show card
 
 Number of players
 
-After the rules are set, you'll be asked how many participants will be playing this session. It affects how many packs of cards are.
+After the rules are set, you'll be asked how many participants will be playing this session. It affects how many packs of cards are. Minimun is one, maximun is up to your PC.
 You don't have to remember which number you are. The script will ask for your name and everytime it's your turn, it will use said name.
  
 
@@ -84,4 +84,10 @@ A bet once paid and collected is never returned. Thus, one key advantage to the 
 
 Withdraw
 
-The last thing 
+After the game resolution, if any participant would want to withdraw, they can do so by typing their name. The script will recognize the player and deactivate its profile for the remainder of the session.
+If any player's funds are below the minimun bet, they're automatically deactivated and if there are no players left, the script will quit by itself.
+
+#Setup
+
+Game is built under pyhton 3.9 and doesn't requiere any special libraries, other than python installed in the system.
+You can run the game, in Windows, directly from the bat file or through any other means.
