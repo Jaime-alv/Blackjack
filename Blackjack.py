@@ -276,12 +276,16 @@ def double_bet(player):
                     if card_v == 'Ace':
                         player['Ace'] = True
                 player['Play'] = False
+                val = sum_card_values(player['c_values1'])
                 if player['Ace'] and (val + 10) <= 21:
                     player['Score1'] = val + 10
+                    print('Its value is: {}'.format(val + 10))
                 elif player['Ace'] and (val + 10) > 21:
                     player['Score1'] = val
+                    print('Its value is: {}'.format(val))
                 else:
                     player['Score1'] = val
+                    print('Its value is: {}'.format(val))
                 pause()
                 break
             elif yes_no == 'n':
@@ -301,7 +305,7 @@ def show_card_value(player, deck, deck_value):
     if player['Ace'] and (val + 10) <= 21:
         print('There is an Ace. Possible values are:')
         print('Hard value: ' + str(val))
-        print('soft value: ' + str(val + 10))
+        print('Soft value: ' + str(val + 10))
     else:
         print('Its value is: {}'.format(val))
 
@@ -434,13 +438,13 @@ def game_resolution():
                 else:
                     player['Money'] -= player['Bet']
                     print("Sorry, {}. You lost {}¢.".format(player['Name'], player['Bet'], ))
-            else:
+            else:  # Croupier['BJ'] is False
                 if player['BJ']:
                     player['Money'] += (player['Bet'] * 3) // 2
                     print(
                         "{}. You got Blackjack and receive {}¢!".format(player['Name'], ((player['Bet'] * 3) // 2) +
                                                                         player['Bet']))
-                if player['insurance'] and 0 < player['half_bet']:
+                if player['insurance'] and 0 < player.get('half_bet', 0):
                     print("{} You lost your insurance bet".format(player['Name']))
                     player['Money'] -= player['half_bet']
                 elif Croupier['Score1'] > 21 and player['BJ'] is False:
@@ -504,7 +508,13 @@ def goodbye():  # Check funds available to players, ask if anyone would like to 
     if out == '':
         inactive = 0
         for n in Players:  # Reset all markers to default
-            if Players[n]['Active']:  # If any player is Active, it will reset its markers
+            if Players[n]['Active'] is False:
+                inactive += 1
+                if inactive == Config['Number of players']:
+                    print('No active players left. Goodbye!')
+                    pause()
+                    sys.exit()
+            else:  # If any player is Active, it will reset its markers
                 Players[n]['Deck1'].clear()
                 Players[n]['c_values1'].clear()
                 Players[n]['Play'] = True
@@ -516,12 +526,6 @@ def goodbye():  # Check funds available to players, ask if anyone would like to 
                     Players[n].pop('Deck2')
                     Players[n].pop('c_values2')
                     Players[n].pop('Score2')
-            elif Players[n]['Active'] is False:
-                inactive += 1
-                if inactive == Config['Number of players']:
-                    print('No active players left. Goodbye!')
-                    pause()
-                    sys.exit()
         Croupier['Deck1'].clear()
         Croupier['c_values1'].clear()
         Croupier['Play'] = True
