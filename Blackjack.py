@@ -232,7 +232,7 @@ def insurance():
                     print("It can go from 0, up to {}.".format(bet_half))
                     answer = input('#: ')
                     if answer.isdigit() and 0 <= int(answer) <= bet_half:
-                        Players[x]['half_bet'] = answer
+                        Players[x]['half_bet'] = int(answer)
                         print('Bet updated')
                         Players[x]['insurance'] = True
                         break
@@ -243,7 +243,7 @@ def insurance():
                     print("It can go from 0, up to {}.".format(rest))
                     answer = input('#: ')
                     if answer.isdigit() and 0 <= int(answer) <= rest:
-                        Players[x]['half_bet'] = answer
+                        Players[x]['half_bet'] = int(answer)
                         print('Bet updated')
                         Players[x]['insurance'] = True
                         break
