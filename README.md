@@ -74,6 +74,8 @@ The combination of an ace with a card other than a ten-card is known as a "soft 
 ###### The Croupier's play
 
 When the dealer has served every player, the dealers face-down card is turned up. If the total is 17 or more, it must stand. If the total is 16 or under, they must take a card. The dealer must continue to take cards until the total is 17 or more, at which point the dealer must stand. If the dealer has an ace, and counting it as 11 would bring the total to 17 or more (but not over 21), the dealer must count the ace as 11 and stand. The dealer's decisions, then, are automatic on all plays, whereas the player always has the option of taking one or more cards.
+![croupier](https://user-images.githubusercontent.com/88266316/131799731-53263d32-9537-4c65-a939-77c2404a0f25.jpg)
+
 
 ###### Splitting pairs
 
@@ -89,6 +91,8 @@ When the dealer's face-up card is an ace, any of the players may make a side bet
 ###### Settlement
 
 A bet once paid and collected is never returned. Thus, one key advantage to the dealer is that the player goes first. If the player goes bust, they have already lost their wager, even if the dealer goes bust as well. If the dealer goes over 21, the dealer pays each player who has stood the amount of that player's bet. If the dealer stands at 21 or less, the dealer pays the bet of any player having a higher total (not exceeding 21) and collects the bet of any player having a lower total. If there is a stand-off (a player having the same total as the dealer), no ¢ are paid out or collected.
+![end](https://user-images.githubusercontent.com/88266316/131801253-6605eba3-dad1-40b8-acdb-08495a6401a2.jpg)
+
 
 ###### Withdraw
 
