@@ -228,7 +228,7 @@ def insurance():
             bet_half = Players[x]['Bet'] // 2
             if Players[x]['Money'] >= (Players[x]['Bet'] + bet_half):
                 print("{} would you like adding insurance?".format(Players[x]['Name']))
-                print("It can go from 0, up to {}.".format(bet_half))
+                print("It can go from 0, up to {}¢.".format(bet_half))
                 answer = input('#: ')
                 if answer.isdigit() and 0 <= int(answer) <= bet_half:
                     Players[x]['half_bet'] = int(answer)
@@ -240,7 +240,7 @@ def insurance():
             elif Players[x]['Money'] > Players[x]['Bet']:  # Player's bet + half will be over player's money
                 print("{} would you like adding insurance?".format(Players[x]['Name']))
                 rest = Players[x]['Money'] - Players[x]['Bet']
-                print("It can go from 0, up to {}.".format(rest))
+                print("It can go from 0, up to {}¢.".format(rest))
                 answer = input('#: ')
                 if answer.isdigit() and 0 <= int(answer) <= rest:
                     Players[x]['half_bet'] = int(answer)
