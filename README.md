@@ -7,7 +7,7 @@ The most widely played casino banking game in the world, in Blackjack players do
 The game is a comparing card game where each player competes against the dealer.
 You can play with as many friends as you want!
 
-![poker-1415911-1279x852](https://user-images.githubusercontent.com/88266316/131863579-fa491d0a-6048-489e-ac91-3f7a68f8c59a.jpg)
+![cards](Img/cards.jpg?raw=true)
 Photo by <a href="https://freeimages.com/photographer/vierdrie-46406">Jean Scheijen</a> from <a href="https://freeimages.com">FreeImages</a>
 # Setup
 Game only requires Python 3.
@@ -60,7 +60,7 @@ money. There is a hard coded limit of 500¢.
 ###### The deal
 
 When all players have placed their bets, each player receive two cards, croupier too. All cards will be shown except croupier's second one.
-![first round](https://user-images.githubusercontent.com/88266316/131735625-bc5a6830-911e-4a16-8ea5-ac74cd0fc4eb.jpg)
+![first round](Img/first round.jpg?raw=true)
 
 ###### Naturals
 
@@ -73,13 +73,13 @@ If the dealer's face-up card is a ten-card or an ace, they look at their face-do
 Order is static, Player 1 always starts first, and then comes Player 2 and so on. Player must decide whether to "stand" (not ask for another card) or "hit" (ask for another card in an attempt to get closer to a count of 21, or even hit 21 exactly). Thus, a player may stand on the two cards originally dealt to them, or they may ask the dealer for additional cards, one at a time, until deciding to stand on the total (if it is 21 or under), or goes "bust" (if it is over 21). In the latter case, the player loses and the dealer collects the bet wagered. The dealer then asks next player and serves them in the same manner.
 
 The combination of an ace with a card other than a ten-card is known as a "soft hand," because the player can count the ace as a 1 or 11, and either draw cards or not. For example with a "soft 17" (an ace and a 6), the total is 7 or 17. While a count of 17 is a good hand, the player may wish to draw for a higher total. If the draw creates a bust hand by counting the ace as an 11, the player simply counts the ace as a 1 and continues playing by standing or "hitting" (asking the dealer for additional cards, one at a time). When the player hit s (for stand), the game will pick the highest value without going over 21. If a participant draws 'Ace of Spades' and 'Eight of Hearts', it will be displayed both values, 9 and 19; if, for example, 'five of Clubs' is drawn next, only 14 will be displayed, as 24 is over 21.
-![Ace](https://user-images.githubusercontent.com/88266316/131735957-de04078f-c9ee-44d4-804f-b5d4fb88fc9c.jpg)
+![Ace](Img/Ace.jpg?raw=true)
 
 
 ###### The Croupier's play
 
 When the dealer has served every player, the dealers face-down card is turned up. If the total is 17 or more, it must stand. If the total is 16 or under, they must take a card. The dealer must continue to take cards until the total is 17 or more, at which point the dealer must stand. If the dealer has an ace, and counting it as 11 would bring the total to 17 or more (but not over 21), the dealer must count the ace as 11 and stand. The dealer's decisions, then, are automatic on all plays, whereas the player always has the option of taking one or more cards.
-![croupier](https://user-images.githubusercontent.com/88266316/131799731-53263d32-9537-4c65-a939-77c2404a0f25.jpg)
+![croupier](Img/croupier.jpg?raw=true)
 
 
 ###### Splitting pairs
@@ -98,7 +98,7 @@ When the dealer's face-up card is an ace, any of the players may make a side bet
 ###### Settlement
 
 A bet once paid and collected is never returned. Thus, one key advantage to the dealer is that the player goes first. If the player goes bust, they have already lost their wager, even if the dealer goes bust as well. If the dealer goes over 21, the dealer pays each player who has stood the amount of that player's bet. If the dealer stands at 21 or less, the dealer pays the bet of any player having a higher total (not exceeding 21) and collects the bet of any player having a lower total. If there is a stand-off (a player having the same total as the dealer), no ¢ are paid out or collected.
-![end](https://user-images.githubusercontent.com/88266316/131801253-6605eba3-dad1-40b8-acdb-08495a6401a2.jpg)
+![end](Img/end.jpg?raw=true)
 
 
 ###### Withdraw
