@@ -6,10 +6,14 @@ Everyone's favourite! The rules are simple, the play is thrilling and you can us
 The most widely played casino banking game in the world, in Blackjack players do not compete against each other. 
 The game is a comparing card game where each player competes against the dealer.
 You can play with as many friends as you want!
+
+![](../../../../../Downloads/poker-1415911-1279x852.jpg)
+Photo by <a href="https://freeimages.com/photographer/vierdrie-46406">Jean Scheijen</a> from <a href="https://freeimages.com">FreeImages</a>
 # Setup
 Game only requires Python 3.
 
 Game is built under python 3.9, but it  can possibly run in an older version. 
+
 You can run the game, in Windows, directly from Blackjack.bat file or through shell, or any other means.
 # Rules
 
@@ -50,7 +54,8 @@ Aces can be 1 or 11. Face cards are 10 and any other card is its pip value.
 
 ###### Betting
 
-Before the deal begins, each player places a bet. Minimum bet, by default, is 5, and maximum is the player's available money.
+Before the deal begins, each player places a bet. Minimum bet, by default, is 5¢, and maximum is the player's available 
+money. There is a hard coded limit of 500¢.
 
 ###### The deal
 
