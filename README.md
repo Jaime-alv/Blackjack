@@ -8,6 +8,7 @@ The game is a comparing card game where each player competes against the dealer.
 You can play with as many friends as you want!
 
 ![cards](Img/cards.jpg?raw=true)
+
 Photo by <a href="https://freeimages.com/photographer/vierdrie-46406">Jean Scheijen</a> from <a href="https://freeimages.com">FreeImages</a>
 # Setup
 Game only requires Python 3.
@@ -127,4 +128,7 @@ After the game resolution, if any participant would want to withdraw, they can d
 will recognize the player and deactivate its profile for the remainder of the session. If any player's funds are below 
 the minimum bet, they're automatically deactivated and if there are no players left, the script will quit by itself.
 
+![lots of cards](Img/lots of cards.jpg?raw=true)
+
+Photo by <a href="https://freeimages.com/photographer/mordoc-41072">Christophe Libert</a> from <a href="https://freeimages.com">FreeImages</a>
 

@@ -514,7 +514,7 @@ def goodbye():  # Check funds available to players, ask if anyone would like to 
             if Players[n]['Active'] is False:
                 inactive += 1
                 if inactive == Config['Number of players']:
-                    print('No active players left. Goodbye!')
+                    print('No active players left. Thanks for playing!')
                     pause()
                     sys.exit()
             else:  # If any player is Active, it will reset its markers
