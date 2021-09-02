@@ -7,7 +7,7 @@ The most widely played casino banking game in the world, in Blackjack players do
 The game is a comparing card game where each player competes against the dealer.
 You can play with as many friends as you want!
 
-![](../../../../../Downloads/poker-1415911-1279x852.jpg)
+![poker-1415911-1279x852](https://user-images.githubusercontent.com/88266316/131863579-fa491d0a-6048-489e-ac91-3f7a68f8c59a.jpg)
 Photo by <a href="https://freeimages.com/photographer/vierdrie-46406">Jean Scheijen</a> from <a href="https://freeimages.com">FreeImages</a>
 # Setup
 Game only requires Python 3.
