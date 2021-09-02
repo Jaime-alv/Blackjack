@@ -224,34 +224,35 @@ def first_round():
 def insurance():
     print('\n{} has an Ace as first card.'.format(Croupier['Name']))
     for x in Players:
-        if Players[x]['Money'] > (Players[x]['Bet']):  # player money should be higher to let insurance kick in
-            while True:
-                bet_half = Players[x]['Bet'] // 2
+        while True:
+            bet_half = Players[x]['Bet'] // 2
+            if Players[x]['Money'] >= (Players[x]['Bet'] + bet_half):
                 print("{} would you like adding insurance?".format(Players[x]['Name']))
-                if Players[x]['Money'] >= (Players[x]['Bet'] + bet_half):
-                    print("It can go from 0, up to {}.".format(bet_half))
-                    answer = input('#: ')
-                    if answer.isdigit() and 0 <= int(answer) <= bet_half:
-                        Players[x]['half_bet'] = int(answer)
-                        print('Bet updated')
-                        Players[x]['insurance'] = True
-                        break
-                    else:
-                        print('Enter a valid input, between 0 and {}.'.format(bet_half))
-                else:  # Player's bet + half will be over player's money
-                    rest = Players[x]['Money'] - Players[x]['Bet']
-                    print("It can go from 0, up to {}.".format(rest))
-                    answer = input('#: ')
-                    if answer.isdigit() and 0 <= int(answer) <= rest:
-                        Players[x]['half_bet'] = int(answer)
-                        print('Bet updated')
-                        Players[x]['insurance'] = True
-                        break
-                    else:
-                        print('Enter a valid input, between 0 and {}.'.format(rest))
-        else:
-            print("{}. You don't have enough money for insurance.".format(Players[x]['Name']))
-            pause()
+                print("It can go from 0, up to {}.".format(bet_half))
+                answer = input('#: ')
+                if answer.isdigit() and 0 <= int(answer) <= bet_half:
+                    Players[x]['half_bet'] = int(answer)
+                    print('Bet updated')
+                    Players[x]['insurance'] = True
+                    break
+                else:
+                    print('Enter a valid input, between 0 and {}.'.format(bet_half))
+            elif Players[x]['Money'] > Players[x]['Bet']:  # Player's bet + half will be over player's money
+                print("{} would you like adding insurance?".format(Players[x]['Name']))
+                rest = Players[x]['Money'] - Players[x]['Bet']
+                print("It can go from 0, up to {}.".format(rest))
+                answer = input('#: ')
+                if answer.isdigit() and 0 <= int(answer) <= rest:
+                    Players[x]['half_bet'] = int(answer)
+                    print('Bet updated')
+                    Players[x]['insurance'] = True
+                    break
+                else:
+                    print('Enter a valid input, between 0 and {}.'.format(rest))
+            else:
+                print("{}. You don't have enough money for insurance.".format(Players[x]['Name']))
+                pause()
+                break
 
 
 def pause():
@@ -293,7 +294,7 @@ def double_bet(player):
             elif yes_no == 'n':
                 break
     else:
-        print("{}. You don't have enough money for doubling your bet.".format(player['Name']))
+        print("{}. You don't have enough funds for doubling down your bet.".format(player['Name']))
         pause()
 
 
@@ -378,7 +379,7 @@ def split_deck(player):
             elif answer_double == 'n':
                 break
     else:
-        print("{}. You don't have enough money for playing two decks.".format(player['Name']))
+        print("{}. You don't have enough funds for playing two hands.".format(player['Name']))
         pause()
 
 
