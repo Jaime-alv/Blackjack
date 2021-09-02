@@ -222,15 +222,15 @@ def first_round():
 
 
 def insurance():
-    print('\n{} has an Ace as first card'.format(Croupier['Name']))
+    print('\n{} has an Ace as first card.'.format(Croupier['Name']))
     for x in Players:
         if Players[x]['Money'] > (Players[x]['Bet']):  # player money should be higher to let insurance kick in
             while True:
                 bet_half = Players[x]['Bet'] // 2
                 print("{} would you like adding insurance?".format(Players[x]['Name']))
-                print("It can go from 0, up to half your original bet of {}.".format(Players[x]['Bet']))
-                answer = input('#: ')
-                if Players[x]['Money'] >= (Players[x]['Bet'] + Players[x]['Bet'] // 2):
+                if Players[x]['Money'] >= (Players[x]['Bet'] + bet_half):
+                    print("It can go from 0, up to {}.".format(bet_half))
+                    answer = input('#: ')
                     if answer.isdigit() and 0 <= int(answer) <= bet_half:
                         Players[x]['half_bet'] = answer
                         print('Bet updated')
@@ -240,6 +240,8 @@ def insurance():
                         print('Enter a valid input, between 0 and {}.'.format(bet_half))
                 else:  # Player's bet + half will be over player's money
                     rest = Players[x]['Money'] - Players[x]['Bet']
+                    print("It can go from 0, up to {}.".format(rest))
+                    answer = input('#: ')
                     if answer.isdigit() and 0 <= int(answer) <= rest:
                         Players[x]['half_bet'] = answer
                         print('Bet updated')
