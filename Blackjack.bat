@@ -1,1 +1,1 @@
-@py "%~dp0\Blackjack.py" %*
+@py "%~dp0\game\main.py" %*

@@ -2,25 +2,37 @@
 A command line blackjack game, with all features from classic blackjack for the whole family!
 
 # The game
-Everyone's favourite! The rules are simple, the play is thrilling and you can use all the strategies you want!
+Everyone's favourite! 
+
+The rules are simple, the play is thrilling and you can use all the strategies you want! It doesn't matter if you've never played before
+, or if you are here for a mathematical challenge. This is a game for all.
+
 The most widely played casino banking game in the world, in Blackjack players do not compete against each other. 
 The game is a comparing card game where each player competes against the dealer.
-You can play with as many friends as you want!
+
+And you can play with as many friends as you want!
 
 ![cards](Img/cards.jpg?raw=true)
 
 Photo by <a href="https://freeimages.com/photographer/vierdrie-46406">Jean Scheijen</a> from <a href="https://freeimages.com">FreeImages</a>
-# Setup
-Game only requires Python 3.
+# Start up
+To run the game
 
+Clone this repository git clone https://github.com/moebiuszed/Blackjack.git
+
+Setup virtual environment if required python -m venv venv
+
+Run game with python game\main.py. Alternatively, you can run the game, in Windows, directly from Blackjack.bat file.
+
+Don't need to install anything else other than python.
 Game is built under python 3.9, but it  can possibly run in an older version. 
 
-You can run the game, in Windows, directly from Blackjack.bat file or through shell, or any other means.
+
 # Rules
 
 ###### Default and custom mode
 
-You will be presented with an option to choose, play with the default game rules or your own custom ones. Options are:
+You will be presented with an option to choose, playing with default game rules or your own custom ones. Options are:
 
 - Minimum bet: represents the minimum bet each participant has to make at the start of each game
 - Funds: how much money each player have at available
@@ -41,9 +53,11 @@ ask for your name and everytime it's your turn, it will use said name.
 ###### The Pack
 
 The standard 52-card deck is used and, depending on the number of players, several decks could be shuffled together. 
-Yes, if there is only one deck, there will be only one Ace of Spades, as it should be! The program will remember cards 
+Yes, if there is only one deck, there will be only one Ace of Spades, as it should be! The app will remember cards 
 between games, if all Aces are gone, they're gone until the game reshuffles decks. When there are less than n number of 
 cards left, it will be indicated with a prompt and it will be time for the cards to be reshuffled.
+
+Oh, and you're free to count cards in here.
 
 ###### Object of the game
 
