@@ -5,7 +5,7 @@ A command line blackjack game, with all features from classic blackjack for the 
 Everyone's favourite! 
 
 The rules are simple, the play is thrilling and you can use all the strategies you want! It doesn't matter if you've never played before
-, or if you are here for a mathematical challenge. This is a game for all.
+, or if you are here for a mathematical challenge. This is a game for everyone.
 
 The most widely played casino banking game in the world, in Blackjack players do not compete against each other. 
 The game is a comparing card game where each player competes against the dealer.
