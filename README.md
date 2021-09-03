@@ -76,7 +76,7 @@ money. There is a hard coded limit of 500¢.
 
 When all players have placed their bets, each player receive two cards, croupier too. All cards will be shown except croupier's second one.
 
-![first round](Img/first round.jpg?raw=true)
+![first round](Img/first_round.jpg?raw=true)
 
 ###### Naturals
 
