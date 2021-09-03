@@ -1,5 +1,5 @@
 # Blackjack
-A text-based blackjack game, with all features from classic blackjack for the whole family!
+A command line blackjack game, with all features from classic blackjack for the whole family!
 
 # The game
 Everyone's favourite! The rules are simple, the play is thrilling and you can use all the strategies you want!
