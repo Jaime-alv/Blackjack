@@ -12,7 +12,7 @@ The game is a comparing card game where each player competes against the dealer.
 
 And you can play with as many friends as you want!
 
-![cards](Img/cards.jpg?raw=true)
+![cards](img/cards.jpg?raw=true)
 
 Photo by <a href="https://freeimages.com/photographer/vierdrie-46406">Jean Scheijen</a> from <a href="https://freeimages.com">FreeImages</a>
 # Start up
@@ -22,7 +22,7 @@ Clone this repository git clone https://github.com/moebiuszed/Blackjack.git
 
 Setup virtual environment if required python -m venv venv
 
-Run game with python game\main.py. Alternatively, you can run the game, in Windows, directly from Blackjack.bat file.
+Run game with python blackjack.py.
 
 Don't need to install anything else other than python.
 Game is built under python 3.9, but it  can possibly run in an older version. 
@@ -76,7 +76,7 @@ money. There is a hard coded limit of 500¢.
 
 When all players have placed their bets, each player receive two cards, croupier too. All cards will be shown except croupier's second one.
 
-![first round](Img/first_round.jpg?raw=true)
+![first round](img/first_round.jpg?raw=true)
 
 ###### Naturals
 
@@ -94,14 +94,14 @@ Order is static, Player 1 always starts first, and then comes Player 2 and so on
 
 The combination of an ace with a card other than a ten-card is known as a "soft hand," because the player can count the ace as a 1 or 11, and either draw cards or not. For example with a "soft 17" (an ace and a 6), the total is 7 or 17. While a count of 17 is a good hand, the player may wish to draw for a higher total. If the draw creates a bust hand by counting the ace as an 11, the player simply counts the ace as a 1 and continues playing by standing or "hitting" (asking the dealer for additional cards, one at a time). When the player hit s (for stand), the game will pick the highest value without going over 21. If a participant draws 'Ace of Spades' and 'Eight of Hearts', it will be displayed both values, 9 and 19; if, for example, 'five of Clubs' is drawn next, only 14 will be displayed, as 24 is over 21.
 
-![Ace](Img/Ace.jpg?raw=true)
+![Ace](img/Ace.jpg?raw=true)
 
 
 ###### The Croupier's play
 
 When the dealer has served every player, the dealers face-down card is turned up. If the total is 17 or more, it must stand. If the total is 16 or under, they must take a card. The dealer must continue to take cards until the total is 17 or more, at which point the dealer must stand. If the dealer has an ace, and counting it as 11 would bring the total to 17 or more (but not over 21), the dealer must count the ace as 11 and stand. The dealer's decisions, then, are automatic on all plays, whereas the player always has the option of taking one or more cards.
 
-![croupier](Img/croupier.jpg?raw=true)
+![croupier](img/croupier.jpg?raw=true)
 
 
 ###### Splitting pairs
@@ -137,7 +137,7 @@ over 21, the dealer pays each player who has stood the amount of that player's b
 the dealer pays the bet of any player having a higher total (not exceeding 21) and collects the bet of any player having 
 a lower total. If there is a stand-off (a player having the same total as the dealer), no ¢ are paid out or collected.
 
-![end](Img/end.jpg?raw=true)
+![end](img/end.jpg?raw=true)
 
 
 ###### Withdraw
@@ -146,7 +146,7 @@ After the game resolution, if any participant would want to withdraw, they can d
 will recognize the player and deactivate its profile for the remainder of the session. If any player's funds are below 
 the minimum bet, they're automatically deactivated and if there are no players left, the script will quit by itself.
 
-![lots of cards](Img/ending.jpg?raw=true)
+![lots of cards](img/ending.jpg?raw=true)
 
 Photo by <a href="https://freeimages.com/photographer/mordoc-41072">Christophe Libert</a> from <a href="https://freeimages.com">FreeImages</a>
 
